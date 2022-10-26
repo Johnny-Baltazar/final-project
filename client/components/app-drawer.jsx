@@ -1,6 +1,4 @@
 import React from 'react';
-// import AppContext from '../lib/app-context';
-
 export default class AppDrawer extends React.Component {
   constructor(props) {
     super(props);
@@ -8,11 +6,9 @@ export default class AppDrawer extends React.Component {
       menu: 'hidden',
       shadeStatus: 'hidden',
       icon: 'fa-solid fa-bars fa-3x'
-      // menuSelection: ''
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleMenuChange = this.handleMenuChange.bind(this);
-    // this.accordionRoutes = this.accordionRoutes.bind(this);
   }
 
   handleChange(event) {
@@ -30,13 +26,6 @@ export default class AppDrawer extends React.Component {
       shadeStatus: 'hidden'
     });
   }
-
-  // accordionRoutes(event) {
-  //   const { menuSelection, value } = event.target.textContent;
-  //   this.setState({
-  //     [menuSelection]: value
-  //   });
-  // }
 
   render() {
     const iconClass = this.state.icon;
