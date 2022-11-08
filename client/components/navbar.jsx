@@ -3,7 +3,8 @@ import AppContext from '../lib/app-context';
 import AppDrawer from './app-drawer';
 export default class Navbar extends React.Component {
   render() {
-    const { user, route } = this.context;
+    const { user, route, drawerClick } = this.context;
+
     const loginOrRegister = route.path === 'sign-up' && user === null
       ? 'Login'
       : 'Register';
@@ -11,19 +12,31 @@ export default class Navbar extends React.Component {
       ? '#sign-in'
       : '#sign-up';
     return (
-      <nav className="navbar">
-        <AppDrawer/>
-        <h3>
-          My Travel Log
-        </h3>
-        <div>
-          <a href={navAnc} >
-            <i>
-              {loginOrRegister}
-            </i>
-          </a>
+      <>
+        <nav className="navbar ">
+          <div className="container-fluid justify-content-start nav-font">
+            <div onClick={drawerClick}>
+              <a className="fa-solid fa-bars fa-2x text-white" />
+            </div>
+            <div>
+              <a className="fs-4 fw-bold nav-link navbar-brand text-black" href="#">
+                My Travel Log
+              </a>
+            </div>
+            <div className="col align-self-end text-end me-5">
+              <a className="nav-link" href={navAnc} >
+                <i className="nav-font fw-bold">
+                  {loginOrRegister}
+                </i>
+              </a>
+            </div>
+          </div>
+        </nav>
+        <div >
+          <AppDrawer />
         </div>
-      </nav>
+
+      </>
     );
   }
 }
