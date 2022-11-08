@@ -8,7 +8,7 @@ const styles = {
 
 export default function PageContainer({ children }) {
   return (
-    <div className="container" style={styles.page}>
+    <div className="container" style={styles.page} >
       {children}
     </div>
   );

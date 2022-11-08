@@ -15,8 +15,8 @@ export default class Navbar extends React.Component {
       <>
         <nav className="navbar ">
           <div className="container-fluid justify-content-start nav-font">
-            <div onClick={drawerClick}>
-              <a className="fa-solid fa-bars fa-2x text-white" />
+            <div>
+              <a className="fa-solid fa-bars fa-2x text-white" onClick={drawerClick} />
             </div>
             <div>
               <a className="fs-4 fw-bold nav-link navbar-brand text-black" href="#">
@@ -32,10 +32,7 @@ export default class Navbar extends React.Component {
             </div>
           </div>
         </nav>
-        <div >
-          <AppDrawer />
-        </div>
-
+        <AppDrawer />
       </>
     );
   }

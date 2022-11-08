@@ -1,0 +1,39 @@
+.navbar {
+  background-color: #0aa2c0;
+}
+
+.nav-font {
+  font-family: "Work Sans", sans-serif;
+  color: white;
+}
+
+.app-drawer {
+  position: relative;
+  top: -4rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.shade {
+  background: rgb(0 0 0 / 60%);
+  height: 100vh;
+}
+
+.roboto-font,
+.container {
+  font-family: Roboto, sans-serif;
+}
+
+.orange-this {
+  background-color: #ca6510;
+}
+
+.btn {
+  border: none;
+}

@@ -14,15 +14,20 @@ export default class AuthPage extends React.Component {
       ? 'Login'
       : 'Register';
     return (
-      <div>
+      <div className="row d-flex justify-content-center mt-5">
         <div>
-          <h2>
+          <h2 className="text-center fw-bold">
             {welcomeMessage}
           </h2>
         </div>
-        <div>
+        <div className="col-md-6">
           {welcomeMessage === 'Register' &&
-            <RegForm />
+            <div>
+              <RegForm />
+              <p className="fw-bold text-center pt-5">Already have an account?
+                <a className="text-decoration-none" href="#sign-in"> Sign in.</a>
+              </p>
+            </div>
           }
           {welcomeMessage === 'Login' &&
             <h2>Login Page Under Construction</h2>
