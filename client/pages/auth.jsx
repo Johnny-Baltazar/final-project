@@ -2,11 +2,10 @@ import React from 'react';
 import Redirect from '../components/redirect';
 import RegForm from '../components/reg-form';
 import AppContext from '../lib/app-context';
-
 export default class AuthPage extends React.Component {
   render() {
 
-    const { user, route } = this.context;
+    const { user, route, appDrawerOpen } = this.context;
 
     if (user) return <Redirect to="" />;
 
@@ -14,7 +13,7 @@ export default class AuthPage extends React.Component {
       ? 'Login'
       : 'Register';
     return (
-      <div className="row d-flex justify-content-center mt-5">
+      <div className={`row d-flex justify-content-center mt-5 ${appDrawerOpen}`}>
         <div>
           <h2 className="text-center fw-bold">
             {welcomeMessage}

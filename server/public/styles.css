@@ -5,24 +5,23 @@
 .nav-font {
   font-family: "Work Sans", sans-serif;
   color: white;
+  font-style: normal;
 }
 
 .app-drawer {
-  position: relative;
-  top: -4rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
 }
 
 a {
   text-decoration: none;
 }
 
-.hidden {
-  display: none;
-}
-
 .shade {
   background: rgb(0 0 0 / 60%);
-  height: 100vh;
+  height: calc(100vh + 3rem);
 }
 
 .roboto-font,
